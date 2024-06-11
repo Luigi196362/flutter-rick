@@ -1,0 +1,9 @@
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+final storage = FlutterSecureStorage();
+
+// Para guardar el token
+await storage.write(key: 'jwt_token', value: token);
+
+// Para leer el token
+String? token = await storage.read(key: 'jwt_token');
